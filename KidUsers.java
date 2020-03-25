@@ -8,6 +8,7 @@ public class KidUsers implements LibraryUser{
 		// TODO Auto-generated constructor stub
 		
 	}
+	
 
 	@Override
 	public void registerAccount() {
@@ -23,7 +24,7 @@ public class KidUsers implements LibraryUser{
 	@Override
 	public void requestBook() {
 		// TODO Auto-generated method stub
-		if(bookType=="Kids") {
+		if(bookType.equals("Kids")) {
 			System.out.println("Book issued successfully, please return the book within 10 days");
 		}
 		else {

@@ -10,23 +10,16 @@ public class LibraryInterfaceDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		KidUsers[] k=new KidUsers[10];
+		KidUsers[] k=new KidUsers[2];
 		AdultUser a=new AdultUser();
 		Scanner sc=new Scanner(System.in);
 		int ch=sc.nextInt();
 		
 		switch(ch) {
 		case 1:
-			//kid			
-			k[0].age=sc.nextInt();
-			k[0].registerAccount();
-			k[1].age=sc.nextInt();			
-			k[1].registerAccount();
-			
-			k[0].bookType=sc.nextLine();
-			k[0].requestBook();
-			k[1].bookType=sc.nextLine();
-			k[1].requestBook();
+			//kid
+			k[0]=getInput(sc);
+			k[1]=getInput(sc);
 			break;
 		case 2:
 			//adult
@@ -41,6 +34,16 @@ public class LibraryInterfaceDemo {
 		
 		sc.close();
 		
+	}
+//For array of objects , you need to have input like that
+	private static KidUsers getInput(Scanner sc) {
+		KidUsers k=new KidUsers();
+		k.age=sc.nextInt();
+		k.registerAccount();
+		sc.nextLine();
+		k.bookType=sc.nextLine();
+		k.requestBook();
+		return k;
 	}
 
 }
