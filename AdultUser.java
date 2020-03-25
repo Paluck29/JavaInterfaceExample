@@ -23,7 +23,7 @@ public class AdultUser implements LibraryUser{
 	@Override
 	public void requestBook() {
 		// TODO Auto-generated method stub
-		if(bookType=="Fiction") {
+		if(bookType.equals("Fiction")) {
 			System.out.println("Book issued successfully, please return the book within 7 days");
 		}
 		else {
