@@ -35,7 +35,7 @@ public class LibraryInterfaceDemo {
 		sc.close();
 		
 	}
-//For array of objects , you need to have input like that
+//For array of objects , you need to have input like this
 	private static KidUsers getInput(Scanner sc) {
 		KidUsers k=new KidUsers();
 		k.age=sc.nextInt();
